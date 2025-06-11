@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+	--black: #1c202b;
+	--blue: #0A327B;
+	--dark-grey: #5e6778;
+	--grey: #939cad;
+	--white: #ffffff;
+	--background: #f7fafd;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+	width: 100vw;
+	padding: 48px;
+	background-color: var(--background);
+}
+
+main {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(1, fr);
+	grid-auto-rows: auto;
+    gap: 24px;
+}
+
+section {
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+img {
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	color: var(--black);
+}
+
+p {
+	color: var(--dark-grey);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0px;
+}
+
+.senior {
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0px;
+	color: var(--white);
+	padding: 4px;
+	border-radius: 6px;
+	background-color: var(--blue);
+	border: none;
+}
+
+.div-text {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	align-items: flex-start;
+    padding: 8px 12px;
+}
+
+.days-ago {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	letter-spacing: 0px;
+    color: var(--grey);
+}
+
+.nom-senior-div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 650px) {
+    section {
+        flex-direction: row;
+    }
+
+    img {
+        width: 30%;
+        border-radius: 15px 0px 0px 15px;
+    }
+
+    .nom-senior-div {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 100px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+}
